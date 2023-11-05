@@ -1,26 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define N_STUDENT 5
+#define SIZE   4
+
+void square_array(int a[], int size)
+{
+	int i;
+	
+	for (i=0;i<size;i++)
+		a[i] =a[i] * a[i];
+}
+void print_array(int a[], int size)
+{
+	int i;
+	for (i=0;i<size;i++)
+		printf("%3d", a[i]);
+	printf("\n");
+}
 
 int main(int argc, char *argv[]) 
 {
-	int i;
-	int a[N_STUDENT] = {1, 2, 3, 4, 5};
-	int b[N_STUDENT] = {1, 2, 3, 3, 5};
-	int flag = 0;
+	int list[SIZE] = {1, 2, 3, 4};
 	
-	for (i=0;i<N_STUDENT;i++)
-	{
-		if (a[i] != b[i])
-		{
-			printf("array a and b are not the same");
-			flag = 1;
-		}
-		
-	}
-	if (flag == 0)
-		printf("array a and b are the same");
-		
+	print_array(list, SIZE);
+	square_array(list, SIZE);
+	print_array(list, SIZE);
 	system("PAUSE");
 	return 0;
 }
