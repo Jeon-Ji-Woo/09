@@ -4,15 +4,9 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(void) {
-	int i=0;
-	char str[4];
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = '\0';
-	
-	while (str[i] != '\0') {
-	printf("%c", str[i]);
-	i++; 
-}
+	char code1 = 'A';
+	int code2 = 65;
+	printf("code1 = %c, (%d)\n", code1, code1);
+	printf("code2 = %c, (%d)\n", code2, code2);
+	return 0;
 }
